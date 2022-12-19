@@ -13,7 +13,8 @@ repositories {
 }
 
 kotlin {
-    js {
+    js {                                       // browser locks up using default LEGACY compiler
+//  js(IR) {                                   // no lockups observed using IR compiler
         binaries.executable()
         browser {
             commonWebpackConfig {
